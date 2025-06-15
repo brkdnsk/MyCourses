@@ -1,12 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { TapGesture } from 'react-native-gesture-handler/lib/typescript/handlers/gestures/tapGesture';
+import CourseInput from './src/components/CourseInput';
 
 export default function App() {
+  const [modalIsVisible, setModalIsVisible] = useState(false) 
+
+  const startModal= () => {
+    setModalIsVisible=(true);
+  }
   return (
+   
+   
+    
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Button title="Kurs Ekle" color='blue' onPress={startModal}/>
       <StatusBar style="auto" />
+      <CourseInput visible={modalIsVisible}/>
     </View>
+    
   );
 }
 
