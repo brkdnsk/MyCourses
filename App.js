@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { useState } from 'react';
-import { TapGesture } from 'react-native-gesture-handler/lib/typescript/handlers/gestures/tapGesture';
+//import { TapGesture } from 'react-native-gesture-handler/lib/typescript/handlers/gestures/tapGesture';
 import CourseInput from './src/components/CourseInput';
 
 export default function App() {
